@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rajesh — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Razesh, a frontend developer who builds fast, accessible and friendly websites."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Razesh — Frontend Developer" />
+    <meta property="og:description" content="Fast, accessible and friendly websites." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      /* Set the theme before first paint so there is no flash. */
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const dark =
+          stored === "dark" ||
+          (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-name">Rajesh</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to dark theme"
+            title="Switch colour theme"
+          >
+            <span class="icon-sun" aria-hidden="true">☀️</span>
+            <span class="icon-moon" aria-hidden="true">🌙</span>
+          </button>
+          <button
+            class="icon-btn nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open menu"
+          >
+            <span aria-hidden="true">☰</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero shell reveal">
+        <p class="badge"><span class="dot" aria-hidden="true"></span> Available for freelance work</p>
+        <h1>
+          Hi, I'm Rajesh.<br />
+          I build <span class="accent">fast, accessible</span> websites.
+        </h1>
+        <p class="lede">
+          Frontend developer focused on clean interfaces, quick load times and code that other
+          people can read. I turn designs into pages that work on every screen.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero-stats" aria-label="Quick facts">
+          <li><strong>4+</strong><span>years building for the web</span></li>
+          <li><strong>30</strong><span>projects shipped</span></li>
+          <li><strong>100</strong><span>Lighthouse score target</span></li>
+        </ul>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="shell section" id="about">
+        <header class="section-head reveal">
+          <h2>About me</h2>
+          <p>A short introduction — replace this with your own story.</p>
+        </header>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I started with a handwritten HTML page and never really stopped. Today I work across
+              the whole front of the stack: semantic markup, maintainable CSS, and just enough
+              JavaScript to keep things interactive without slowing them down.
+            </p>
+            <p>
+              I care about the boring parts — keyboard navigation, colour contrast, empty states,
+              error messages — because that is what makes a product feel finished.
+            </p>
+            <p>
+              Off the keyboard you will find me sketching interface ideas, cycling, or losing a
+              argument about font stacks.
+            </p>
+          </div>
+          <aside class="card facts reveal" aria-label="Details">
+            <h3>The essentials</h3>
+            <dl>
+              <div><dt>Based in</dt><dd>Mumbai, India (remote friendly)</dd></div>
+              <div><dt>Focus</dt><dd>UI engineering &amp; design systems</dd></div>
+              <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, React, Git</dd></div>
+              <div><dt>Languages</dt><dd>English, Hindi</dd></div>
+              <div><dt>Status</dt><dd class="ok">Open to new projects</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+      <!-- ============ SKILLS ============ -->
+      <section class="shell section" id="skills">
+        <header class="section-head reveal">
+          <h2>Skills</h2>
+          <p>The tools I reach for most often.</p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="card reveal">
+            <h3>Interface</h3>
+            <ul class="bars">
+              <li style="--level: 92%"><span>HTML &amp; accessibility</span><i></i></li>
+              <li style="--level: 88%"><span>CSS / Sass / layout</span><i></i></li>
+              <li style="--level: 82%"><span>JavaScript / TypeScript</span><i></i></li>
+              <li style="--level: 76%"><span>React</span><i></i></li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Also good at</h3>
+            <ul class="bars">
+              <li style="--level: 74%"><span>Performance tuning</span><i></i></li>
+              <li style="--level: 70%"><span>Node &amp; small APIs</span><i></i></li>
+              <li style="--level: 68%"><span>Design systems</span><i></i></li>
+              <li style="--level: 65%"><span>Testing (Vitest, Playwright)</span><i></i></li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Toolkit</h3>
+            <ul class="chips">
+              <li>Git</li>
+              <li>Vite</li>
+              <li>Tailwind</li>
+              <li>Figma</li>
+              <li>Vitest</li>
+              <li>Playwright</li>
+              <li>Storybook</li>
+              <li>Netlify</li>
+              <li>GitHub&nbsp;Actions</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="shell section" id="projects">
+        <header class="section-head reveal">
+          <h2>Selected projects</h2>
+          <p>Three recent things I am happy with.</p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="card project reveal">
+            <div class="thumb" aria-hidden="true">
+              <svg viewBox="0 0 400 200" role="presentation">
+                <rect width="400" height="200" fill="var(--thumb-1)" />
+                <circle cx="320" cy="40" r="70" fill="var(--thumb-2)" opacity=".55" />
+                <path d="M0 150 L120 90 L200 130 L400 50 L400 200 L0 200Z" fill="var(--thumb-2)" opacity=".8" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Atlas Dashboard</h3>
+              <p>
+                An analytics dashboard rebuilt from a jQuery legacy app. Cut the bundle by 71% and
+                made every chart keyboard-navigable.
+              </p>
+              <ul class="tags"><li>React</li><li>TypeScript</li><li>D3</li></ul>
+              <p class="links">
+                <a href="https://example.com" rel="noopener">Live demo</a>
+                <a href="https://example.com" rel="noopener">Source</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="thumb" aria-hidden="true">
+              <svg viewBox="0 0 400 200" role="presentation">
+                <rect width="400" height="200" fill="var(--thumb-2)" />
+                <rect x="40" y="40" width="150" height="120" rx="12" fill="var(--thumb-1)" opacity=".85" />
+                <rect x="210" y="40" width="150" height="52" rx="12" fill="var(--thumb-1)" opacity=".6" />
+                <rect x="210" y="108" width="150" height="52" rx="12" fill="var(--thumb-1)" opacity=".4" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Fernway Shop</h3>
+              <p>
+                A tiny storefront that runs on static files and a checkout API. Scores 100 / 100 on
+                Lighthouse mobile performance.
+              </p>
+              <ul class="tags"><li>Vanilla JS</li><li>CSS Grid</li><li>Stripe</li></ul>
+              <p class="links">
+                <a href="https://example.com" rel="noopener">Live demo</a>
+                <a href="https://example.com" rel="noopener">Case study</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="thumb" aria-hidden="true">
+              <svg viewBox="0 0 400 200" role="presentation">
+                <rect width="400" height="200" fill="var(--thumb-3)" />
+                <g fill="var(--thumb-1)" opacity=".75">
+                  <circle cx="90" cy="100" r="34" />
+                  <circle cx="200" cy="100" r="46" opacity=".7" />
+                  <circle cx="310" cy="100" r="26" />
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Pulse Notes</h3>
+              <p>
+                An offline-first note app with instant search over 20k notes. Works in a browser tab
+                with no server round trips.
+              </p>
+              <ul class="tags"><li>IndexedDB</li><li>Service Worker</li><li>Web Workers</li></ul>
+              <p class="links">
+                <a href="https://example.com" rel="noopener">Live demo</a>
+                <a href="https://example.com" rel="noopener">Source</a>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p class="more reveal">
+          Want the long list? <a href="https://github.com/" rel="noopener">Browse my GitHub</a>.
+        </p>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="shell section" id="contact">
+        <header class="section-head reveal">
+          <h2>Get in touch</h2>
+          <p>Tell me about the project — I usually reply within a day.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </li>
+              <li>
+                <span class="label">GitHub</span>
+                <a href="https://github.com/" rel="noopener">github.com/yourhandle</a>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <a href="https://linkedin.com/" rel="noopener">linkedin.com/in/yourhandle</a>
+              </li>
+              <li>
+                <span class="label">Timezone</span>
+                <span>IST (UTC+5:30)</span>
+              </li>
+            </ul>
+            <p class="note">
+              This page is 100% static, so the form below opens your own mail app instead of hitting
+              a server. Swap in Formspree, Netlify Forms or a small endpoint if you want real
+              submissions.
+            </p>
+          </div>
+
+          <form class="card reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <small class="error" id="name-error"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <small class="error" id="email-error"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <small class="error" id="message-error"></small>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© <span id="year">2026</span> Razesh. Handcoded with plain HTML, CSS and JavaScript.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+  </body>
+</html>
